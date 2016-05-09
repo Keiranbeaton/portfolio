@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+.icon-menu {
+  width: 3em;
+  float: right;
+}
+
 img {
   max-width: 100%;
 }

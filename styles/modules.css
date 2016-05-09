@@ -2,12 +2,16 @@
   display:block;
 }
 
-.nav-bar:hover {
+.nav-bar:hover ul{
   display: block;
 }
 
 .nav-bar ul{
   display: none;
+}
+
+.nav-bar li {
+  display: inline;
 }
 
 .site-footer ul{
