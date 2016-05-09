@@ -2,6 +2,10 @@
   display:block;
 }
 
+.nav-bar:hover {
+  display: block;
+}
+
 .nav-bar ul{
   display: none;
 }
@@ -22,7 +26,7 @@
   .site-footer ul {
     display: block;
   }
-  
+
   .site-footer li {
     display: inline;
   }
