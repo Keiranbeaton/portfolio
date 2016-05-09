@@ -1,0 +1,16 @@
+.site-header {
+  text-align: center;
+}
+
+.site-footer {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  padding-left: 2em;
+  padding-right: 2em;
+}
