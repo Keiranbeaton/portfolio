@@ -2,10 +2,6 @@
   display:block;
 }
 
-.nav-bar:hover ul{
-  display: block;
-}
-
 .nav-bar ul{
   display: none;
 }
