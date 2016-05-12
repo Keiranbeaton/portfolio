@@ -3,6 +3,7 @@
   <head>
     <title>Keiran Beaton Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendors/styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
@@ -17,9 +18,9 @@
       <nav class="nav-bar">
         <section class="icon-menu"><img src="images/icon-image.jpg"/></section>
         <ul>
-          <li><a href="#" class="icon-home">Home</a></li>
-          <li><a href="#" class="icon-projects">Projects</a></li>
-          <li><a href="#" class="icon-about-me">About Me</a></li>
+          <li><a href="#" class="icon-home nav-tab" data-content="page-description">Home</a></li>
+          <li><a href="#" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
+          <li><a href="#" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
           <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
           <li><a href="https://github.com/Keiranbeaton" class="icon-github">Github</a></li>
         </ul>
@@ -27,11 +28,13 @@
     </header>
 
     <main>
-      <section class="page-description">
-        <div class="section-header">Page Description</div>
+      <section id="page-description" class="content-section">
+        <div class="section-header">
+          <h3>Page Description</h3>
+        </div>
         <article>
           <header class="article-header">
-          <h3>Some kind of subheader</h3>
+          <h4>Some kind of subheader</h4>
           </header>
           <section class="article-body">
           <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
@@ -39,21 +42,31 @@
         </article>
       </section>
 
-      <section id="projects-section">
-        <div class="section-header">Projects</div>
-        <article class="template" data-category="cat">
+      <section id="projects-section" class="content-section">
+        <div class="section-header">
+          <h3>Projects</h3>
+        </div>
+        <div>
+            <select id="category-filter">
+              <option value="">-- Filter by Categories --</option>
+            </select>
+        </div>
+        <article class="template project" data-category="cat">
           <header class="article-header">
-            <h3>Title</h3>
+            <h4>Title</h4>
             <div class="created-info">
               Created <time pubdate datetime="2000-01-01">Created Time</time>
             </div>
           </header>
           <section class="article-body"></section>
+          <a href="#" class="read-more">More &rarr;</a>
         </article>
       </section>
 
-      <section class="about-me">
-        <div class="section-header">About Me</div>
+      <section id="about-me" class="content-section">
+        <div class="section-header">
+          <h4>About Me</h4>
+          </div>
         <article>
           <header class="article-header">
             <h3></h3>
@@ -69,9 +82,9 @@
       <nav>
         <div class="icon-menu"></div>
         <ul>
-          <li><a href="#" class="icon-home">Home</a></li>
-          <li><a href="#" class="icon-projects">Projects</a></li>
-          <li><a href="#" class="icon-about-me">About Me</a></li>
+          <li><a href="#" class="icon-home nav-tab">Home</a></li>
+          <li><a href="#" class="icon-projects nav-tab">Projects</a></li>
+          <li><a href="#" class="icon-about-me nav-tab">About Me</a></li>
           <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
           <li><a href="#" class="icon-github">Github</a></li>
         </ul>
@@ -80,5 +93,7 @@
     <script src="vendors/scripts/jquery-2.2.3.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/source.js"></script>
+    <script src="scripts/projectsView.js"></script>
+    <script src="scripts/modules.js"></script>
   </body>
 </html>
