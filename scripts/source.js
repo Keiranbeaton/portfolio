@@ -8,7 +8,7 @@ Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.removeClass('template');
   $newProject.attr('data-category', this.category);
-  $newProject.find('h3:first').html(this.title);
+  $newProject.find('h4:first').html(this.title);
   $newProject.find('.article-body').html(this.body);
   $newProject.find('time[pubdate]').attr('datetime', this.createdOn);
   $newProject.find('time[pubdate]').attr('title', this.createdOn);
@@ -21,8 +21,8 @@ projectsArray.sort(function(a,b) {
   return (new Date(b.createdOn)) - (new Date(a.createdOn));
 });
 
-projectsArray.forEach(function(keiran) {
-  projects.push(new Project(keiran));
+projectsArray.forEach(function(ele) {
+  projects.push(new Project(ele));
 });
 
 projects.forEach(function(a){
