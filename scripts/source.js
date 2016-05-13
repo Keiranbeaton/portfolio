@@ -1,7 +1,7 @@
 var projects = [];
 
 function Project (opts) {
-  for(var prop in opts) {this[prop]= opts[prop];}
+  for(var prop in opts) {this[prop] = opts[prop];}
 }
 
 Project.prototype.toHtml = function() {
@@ -28,6 +28,6 @@ projects.forEach(function(obj){
   $('#projects-section').append(obj.toHtml());
   $('#category-filter').append(obj.populateFilters());
   $('select option').each(function() {
-    $(this).siblings('[value="' +this.value + '"]').remove();
+    $(this).siblings('[value="' + this.value + '"]').remove();
   });
 });

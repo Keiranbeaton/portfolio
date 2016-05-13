@@ -21,13 +21,12 @@ projectView.handleNavBar = function() {
 //   });
 // };
 
-
 projectView.handleFilter = function() {
   $('#category-filter').on('change', function() {
     if($(this).val()) {
       $('article').hide();
       var categoryName = $(this).val();
-      $('article[data-category="'+ categoryName + '"]').fadeIn();
+      $('article[data-category="' + categoryName + '"]').fadeIn();
     } else {
       $('article').show();
     }
