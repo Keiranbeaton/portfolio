@@ -12,8 +12,8 @@ Project.prototype.toHtml = function() {
 
 Project.prototype.populateFilters = function(){
   var $filterSource = $('#filter-template').html();
-  var authorTemplate = Handlebars.compile($authorSource);
-  return authorTemplate(this);
+  var filterTemplate = Handlebars.compile($filterSource);
+  return filterTemplate(this);
 };
 
 projectsArray.sort(function(a,b) {

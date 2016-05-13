@@ -6,21 +6,20 @@ projectView.handleNavBar = function() {
     var chosenTab = $(this).attr('data-content');
     $('section[id = "' + chosenTab + '"]').fadeIn();
   });
-  $('.template').hide();
   $('.nav-bar .nav-tab:first').click();
 };
 
-projectView.populateFilter = function() {
-  $('.project').each(function() {
-    if (!$(this).hasClass('template')) {
-      var val = $(this).attr('data-category');
-      var optionTag = '<option value="' + val + '">' + val + '</option>';
-      if ($('#category-filter option[value="' + val + '"]').length === 0) {
-        $('#category-filter').append(optionTag);
-      }
-    }
-  });
-};
+// projectView.populateFilter = function() {
+//   $('.project').each(function() {
+//     if (!$(this).hasClass('template')) {
+//       var val = $(this).attr('data-category');
+//       var optionTag = '<option value="' + val + '">' + val + '</option>';
+//       if ($('#category-filter option[value="' + val + '"]').length === 0) {
+//         $('#category-filter').append(optionTag);
+//       }
+//     }
+//   });
+// };
 
 
 projectView.handleFilter = function() {
@@ -31,7 +30,6 @@ projectView.handleFilter = function() {
       $('article[data-category="'+ categoryName + '"]').fadeIn();
     } else {
       $('article').show();
-      $('.template').hide();
     }
   });
 };
@@ -49,7 +47,6 @@ projectView.setTeasers = function() {
 
 $(document).ready(
   projectView.handleNavBar(),
-  projectView.populateFilter(),
   projectView.handleFilter(),
   projectView.setTeasers()
 );
