@@ -1,48 +1,67 @@
 body {
-  line-height: normal;
-  background-color: #639D86;
-  padding: 20px;
+  background-color: #CAEBF2;
+  color: #c9383b;
+  font-size: 1rem;
 }
 
-article {
+.content-section {
   border-style: solid;
-  border-width: thin;
-  border-color: black;
-  background-color: #667999;
-  margin-top:10px;
+  border-width: medium;;
+  border-color: #737373;
+  background-color: #EFEFEF;
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.157rem;
+  font-family: garamond;
+  font-weight: bolder;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.369rem;
+  font-family: georgia;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.777rem;
+  font-family: georgia;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.333rem;
+  font-family: georgia;
 }
 
 .site-header{
-    background-color: #667999;
+  border-style: solid;
+  border-width: medium;
+  border-color: #737373;
+  background-color: #EFEFEF;
 }
 
 .site-footer {
-    background-color: #667999;
-    margin-top: 10px;
+  border-style: solid;
+  border-width: medium;
+  border-color: #737373;
+  background-color: #EFEFEF;
+}
+
+p {
+  color: #737373;
+  font-family: arial;
+  font-weight: lighter;
 }
 
 a {
-  color: black;
+  color: #c9383b;
   text-decoration: none;
-  font-size: 1em;
+  font-family: arial;
+  font-weight: lighter;
 }
 
-hr {
-  border-color: #B3D485;
+select {
+  background-color: #CAEBF2;
+  color: #c9383b;
+  font-family: arial;
+  font-weight: lighter;
 }
