@@ -10,7 +10,7 @@
   display: inline;
 }
 
-.site-footer ul{
+.site-footer{
   display: none;
 }
 
@@ -21,6 +21,10 @@
 
   .nav-bar li {
     display: inline;
+  }
+
+  .site-footer {
+    display:block;
   }
 
   .site-footer ul {

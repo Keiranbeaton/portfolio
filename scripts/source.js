@@ -5,16 +5,15 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  $newProject.attr('data-category', this.category);
-  $newProject.find('h4:first').html(this.title);
-  $newProject.find('.article-body').html(this.body);
-  $newProject.find('time[pubdate]').attr('datetime', this.createdOn);
-  $newProject.find('time[pubdate]').attr('title', this.createdOn);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.createdOn))/60/60/24/1000) + ' days ago');
-  $newProject.append('<hr>');
-  return $newProject;
+  var $source = $('#template').html();
+  var template = Handlebars.compile($source);
+  return template(this);
+};
+
+Project.prototype.populateFilters = function(){
+  var $filterSource = $('#filter-template').html();
+  var filterTemplate = Handlebars.compile($filterSource);
+  return filterTemplate(this);
 };
 
 projectsArray.sort(function(a,b) {
@@ -25,6 +24,10 @@ projectsArray.forEach(function(ele) {
   projects.push(new Project(ele));
 });
 
-projects.forEach(function(a){
-  $('#projects-section').append(a.toHtml());
+projects.forEach(function(obj){
+  $('#projects-section').append(obj.toHtml());
+  $('#category-filter').append(obj.populateFilters());
+  $('select option').each(function() {
+    $(this).siblings('[value="' +this.value + '"]').remove();
+  });
 });

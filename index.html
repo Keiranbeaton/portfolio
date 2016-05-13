@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <script id="template" type="text/x-handlebars-template">
+      <article class="project" data-category="{{category}}">
+        <header class="article-header">
+          <h4>{{title}}</h4>
+          <div class="created-info">
+            Created <time datetime='{{createdOn}}'>{{createdOn}}</time>
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-more">More &rarr;</a>
+      </article>
+    </script>
+    <script id="filter-template" type="text/x-handlebars-template">
+      <option value='{{category}}'>{{category}}</option>
+    </script>
   </head>
 
   <body>
@@ -51,16 +66,6 @@
               <option value="">-- Filter by Categories --</option>
             </select>
         </div>
-        <article class="template project" data-category="cat">
-          <header class="article-header">
-            <h4>Title</h4>
-            <div class="created-info">
-              Created <time pubdate datetime="2000-01-01">Created Time</time>
-            </div>
-          </header>
-          <section class="article-body"></section>
-          <a href="#" class="read-more">More &rarr;</a>
-        </article>
       </section>
 
       <section id="about-me" class="content-section">
@@ -91,6 +96,7 @@
       </nav>
     </footer>
     <script src="vendors/scripts/jquery-2.2.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="scripts/projects.js"></script>
     <script src="scripts/source.js"></script>
     <script src="scripts/projectsView.js"></script>
