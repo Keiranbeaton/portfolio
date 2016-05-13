@@ -2,13 +2,7 @@ body {
   background-color: #CAEBF2;
   color: #c9383b;
   font-size: 1rem;
-}
-
-.content-section {
-  border-style: solid;
-  border-width: medium;;
-  border-color: #737373;
-  background-color: #EFEFEF;
+  padding: 2rem;
 }
 
 h1 {
@@ -30,20 +24,7 @@ h3 {
 h4 {
   font-size: 1.333rem;
   font-family: georgia;
-}
-
-.site-header{
-  border-style: solid;
-  border-width: medium;
-  border-color: #737373;
-  background-color: #EFEFEF;
-}
-
-.site-footer {
-  border-style: solid;
-  border-width: medium;
-  border-color: #737373;
-  background-color: #EFEFEF;
+  margin-bottom: 0.25rem;
 }
 
 p {
@@ -64,4 +45,15 @@ select {
   color: #c9383b;
   font-family: arial;
   font-weight: lighter;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
 }

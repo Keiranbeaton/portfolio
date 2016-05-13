@@ -1,17 +1,9 @@
-.icon-menu {
-  display:block;
-}
-
 .nav-bar ul{
   display: none;
 }
 
 .nav-bar li {
   display: inline;
-}
-
-.site-footer{
-  display: none;
 }
 
 @media screen and (min-width: 640px) {
