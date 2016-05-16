@@ -9,26 +9,14 @@ projectView.handleNavBar = function() {
   $('.nav-bar .nav-tab:first').click();
 };
 
-// projectView.populateFilter = function() {
-//   $('.project').each(function() {
-//     if (!$(this).hasClass('template')) {
-//       var val = $(this).attr('data-category');
-//       var optionTag = '<option value="' + val + '">' + val + '</option>';
-//       if ($('#category-filter option[value="' + val + '"]').length === 0) {
-//         $('#category-filter').append(optionTag);
-//       }
-//     }
-//   });
-// };
-
 projectView.handleFilter = function() {
   $('#category-filter').on('change', function() {
     if($(this).val()) {
       $('.project').hide();
-      var categoryName = $(this).val();
-      $('.project[data-category="' + categoryName + '"]').fadeIn();
+      $('.project[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
-      $('article').show();
+      $('.project').fadeIn();
+      $('article.template').hide();
     }
   });
 };
@@ -44,8 +32,14 @@ projectView.setTeasers = function() {
   });
 };
 
-$(document).ready(
-  projectView.handleNavBar(),
-  projectView.handleFilter(),
-  projectView.setTeasers()
-);
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(a){
+    if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
+      $('#category-filter').append(a.toHtml($('#filter-template')));
+    };
+    $('#projects-section').append(a.toHtml($('#template')));
+  });
+  projectView.handleNavBar();
+  projectView.handleFilter();
+  projectView.setTeasers();
+};
