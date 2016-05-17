@@ -1,0 +1,20 @@
+[
+  {
+    "title":  "Cookie Stand",
+    "category": "Codefellows 201",
+    "createdOn":  "2016-04-21",
+    "body":  "<p>This was a project I completed for Codefellows 201. We were given the task of making two separate pages. The first would be a customer facing page for a hypothetical cookie shop. The second would allow the shops owner to view store sales data for different locations, and would allow them to add locations by passing in a minimal amount of data.<\/p><p>More body text.<\/p>"
+  },
+  {
+    "title":  "Bus Mall",
+    "category": "Codefellows 201",
+    "createdOn":  "2016-04-28",
+    "body":  "<p>This was a project I completed for Codefellows 201. We were given 20 photos, and tasked with making 3 random images from these 20 appear on each click. We had to track how many times each image was clicked, and store this data to local storage to allow for data from multiple uses. We also had to give the user a choice after 25 clicks, giving them the option of viewing their results or continuing for ten more clicks.<\/p><p>More body text.<\/p>"
+  },
+  {
+    "title":  "Sasquatch Dice",
+    "category": "Codefellows 201",
+    "createdOn":  "2016-05-04",
+    "body":  "<p>This was a project I worked on as part of a group for my Final Project in Codefellows 201. We created a probability game, and saved the scores of each game to create a leaderboard that users could view on a separate page.<\/p><p>More body text.<\/p>"
+  }
+]
