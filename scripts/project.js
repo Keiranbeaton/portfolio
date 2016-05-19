@@ -69,13 +69,7 @@
         category: category,
         totalNumber: Project.all.filter(function(a) {
           return a.category === category;
-        })
-        .map(function(a) {
-          return 1;
-        })
-        .reduce(function(a, b) {
-          return a + b;
-        })
+        }).length
       };
     });
   };

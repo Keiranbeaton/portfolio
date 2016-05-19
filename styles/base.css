@@ -1,9 +1,7 @@
-/*1% = 11.75px
-1 rem = 16px*/
-
 body {
-  background-color: #CAEBF2;
-  color: #c9383b;
+  background-image: url("../images/uw-fountain.jpg");
+  background-attachment: fixed;
+  color: #328A2E;
   font-size: 1rem;
   padding: 2rem 2.72% 2rem 2.72%;
 }
@@ -17,6 +15,7 @@ h1 {
 h2 {
   font-size: 2.369rem;
   font-family: georgia;
+  color: #AA6239;
 }
 
 h3 {
@@ -29,25 +28,29 @@ h4 {
   font-family: georgia;
   margin-top: 0.25rem;
   margin-bottom: 0.125rem;
+  color: #AA6239;
 }
 
 p {
-  color: #737373;
+  color: black;
   font-family: arial;
   font-weight: lighter;
   margin: 0.5rem 0.68% 0.5rem 0.68%;
 }
 
 a {
-  color: #c9383b;
+  color: #328A2E;
   text-decoration: none;
   font-family: arial;
   font-weight: lighter;
 }
 
 select {
-  background-color: #CAEBF2;
-  color: #c9383b;
+  background-color: black;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  color: #B9D5F9;
   font-family: arial;
   font-weight: lighter;
   margin-top: 0.5rem;
@@ -57,6 +60,9 @@ select {
 img {
   max-width: 100%;
   max-height: 100%;
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
 }
 
 li {
