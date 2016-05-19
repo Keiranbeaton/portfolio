@@ -2,6 +2,10 @@
   display: none;
 }
 
+nav:hover ul{
+  display: block;
+}
+
 .nav-bar li {
   display: inline;
 }

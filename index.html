@@ -20,7 +20,7 @@
       </article>
     </script>
     <script id="filter-template" type="text/x-handlebars-template">
-      <option value='{{category}}'>{{category}}</option>
+      <option value='{{category}}'>{{category}}; {{totalNumber}} Project(s) Included</option>
     </script>
   </head>
 
@@ -63,7 +63,7 @@
         </div>
         <div>
             <select id="category-filter">
-              <option value="">-- Filter by Categories --</option>
+              <option value="">-- Filter by Date Created --</option>
             </select>
         </div>
       </section>
@@ -76,6 +76,9 @@
           <header class="article-header">
             <h3></h3>
           </header>
+          <section class="photo-container">
+            <img src="images/keiran-fourth-of-july.jpg">
+          </section>
           <section class="article-body">
             <p>I graduated the University of Washington in August of 2015 with a Bachelor's degree in Political Science. I spent a short time in sales, but I realized I really didn't like sales and it wasn't something I wanted to be doing for a career. I'm an avid sports fan, and can't wait for my Dawgs to be National Champions in college football this upcoming season.</p>
           </section>
@@ -99,9 +102,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="scripts/project.js"></script>
     <script src="scripts/projectView.js"></script>
-    <script src="scripts/modules.js"></script>
     <script>
-      Project.fetchAll();
+      Project.fetchAll(projectView.initIndexPage);
     </script>
   </body>
 </html>
