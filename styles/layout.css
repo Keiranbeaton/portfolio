@@ -45,6 +45,7 @@
   display: inline-block;
   width: 60%;
   height: 100%;
+  vertical-align: top;
 }
 
 .about-me-text-content {
