@@ -3,7 +3,7 @@
 }
 
 nav:hover ul{
-  display: block;
+  display: inline-block;
 }
 
 .nav-bar li {
@@ -13,10 +13,14 @@ nav:hover ul{
 @media screen and (min-width: 640px) {
   .nav-bar ul {
     display: block;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-bar li {
     display: inline;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 
   .site-footer {

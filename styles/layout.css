@@ -7,12 +7,23 @@
   border-width: medium;
   border-color: black;
   background-color: rgba(185, 213, 249, 0.9);
+  /*text-align: center;*/
+}
+
+.header-title {
   text-align: center;
+}
+
+.header-nav {
+  width: 80%;
+  text-align: left;
+  display: inline-block;
 }
 
 .icon-menu {
   width: 2rem;
-  position: absolute;
+  display: inline-block;
+  /*position: absolute;*/
   left: 0.5%;
   bottom: 0.5%;
 }

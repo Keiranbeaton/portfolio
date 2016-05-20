@@ -60,14 +60,14 @@ select {
 img {
   max-width: 100%;
   max-height: 100%;
-  border-style: solid;
-  border-width: medium;
-  border-color: black;
+  /*border-style: solid;*/
+  /*border-width: medium;*/
+  /*border-color: black;*/
 }
 
 li {
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 ul {
@@ -76,5 +76,6 @@ ul {
 }
 
 nav {
-  position: relative;
+  width: 100%;
+  display: inline-block;
 }
