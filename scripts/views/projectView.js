@@ -11,15 +11,6 @@
     });
   };
 
-  projectView.handleNavBar = function() {
-    $('.nav-bar').on('click', '.nav-tab', function(){
-      $('.content-section').hide();
-      $('section[id = "' + $(this).attr('data-content') + '"]').show();
-      projectView.setTeasers();
-    });
-    $('.nav-bar .nav-tab:first').click();
-  };
-
   projectView.handleFilter = function() {
     $('#category-filter').on('change', function() {
       if($(this).val()) {
@@ -43,7 +34,6 @@
       $('#projects-section').append(a.toHtml($('#template')));
     });
 
-    projectView.handleNavBar();
     projectView.handleFilter();
     projectView.setTeasers();
   };

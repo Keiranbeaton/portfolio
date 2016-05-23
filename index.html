@@ -33,9 +33,9 @@
       <nav class="nav-bar">
         <img src="images/icon-image.jpg" class="icon-menu" />
         <ul class="header-nav">
-          <li><a href="#" class="icon-home nav-tab" data-content="page-description">Home</a></li>
-          <li><a href="#" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
-          <li><a href="#" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
+          <li><a href="/" class="icon-home nav-tab" data-content="page-description">Home</a></li>
+          <li><a href="/projects" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
+          <li><a href="/about" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
           <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
           <li><a href="https://github.com/Keiranbeaton" class="icon-github">Github</a></li>
         </ul>
@@ -90,20 +90,22 @@
       <nav class="nav-bar">
         <div class="icon-menu"></div>
         <ul>
-          <li><a href="#" class="icon-home nav-tab" data-content="page-description">Home</a></li>
-          <li><a href="#" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
-          <li><a href="#" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
+          <li><a href="/" class="icon-home nav-tab" data-content="page-description">Home</a></li>
+          <li><a href="/projects" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
+          <li><a href="/about" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
           <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
           <li><a href="https://github.com/Keiranbeaton" class="icon-github">Github</a></li>
         </ul>
       </nav>
     </footer>
     <script src="vendors/scripts/jquery-2.2.3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="scripts/project.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script>
-      Project.fetchAll(projectView.initIndexPage);
-    </script>
+    <script src="vendors/scripts/page.js"></script>
+    <script src="vendors/scripts/handlebars.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/projectController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>
