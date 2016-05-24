@@ -1,23 +1,11 @@
-.nav-bar ul{
-  display: none;
-}
-
-nav:hover ul{
-  display: inline-block;
-}
-
-.nav-bar li {
-  display: inline;
-}
-
 @media screen and (min-width: 640px) {
-  .nav-bar ul {
+  ul {
     display: block;
     width: 100%;
     text-align: center;
   }
 
-  .nav-bar li {
+  li {
     display: inline;
     margin-left: 4%;
     margin-right: 4%;
@@ -25,14 +13,6 @@ nav:hover ul{
 
   .site-footer {
     display:block;
-  }
-
-  .site-footer ul {
-    display: block;
-  }
-
-  .site-footer li {
-    display: inline;
   }
 
   .icon-menu {

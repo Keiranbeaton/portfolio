@@ -1,0 +1,11 @@
+body {
+  background-image: url("../../images/uw-fountain.jpg");
+  background-attachment: fixed;
+  padding: 2rem 2.72% 2rem 2.72%;
+}
+
+.container {
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+}

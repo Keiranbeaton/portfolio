@@ -4,9 +4,12 @@
     <title>Keiran Beaton Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendors/styles/reset.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/base/containers.css">
+    <link rel="stylesheet" href="styles/base/text.css">
+    <link rel="stylesheet" href="styles/base/colors.css">
+    <link rel="stylesheet" href="styles/layout/articles.css">
+    <link rel="stylesheet" href="styles/layout/headerAndFooter.css">
+    <link rel="stylesheet" href="styles/modules/minWidth.css">
     <script id="template" type="text/x-handlebars-template">
       <article class="project" data-category="{{category}}">
         <header class="article-header">
@@ -25,7 +28,7 @@
   </head>
 
   <body>
-    <header class="site-header">
+    <header class="site-header container">
       <section class="header-title">
         <h1>Welcome to My Portfolio</h1>
         <h2>Keiran Beaton</h2>
@@ -33,17 +36,17 @@
       <nav class="nav-bar">
         <img src="images/icon-image.jpg" class="icon-menu" />
         <ul class="header-nav">
-          <li><a href="#" class="icon-home nav-tab" data-content="page-description">Home</a></li>
-          <li><a href="#" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
-          <li><a href="#" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
-          <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
-          <li><a href="https://github.com/Keiranbeaton" class="icon-github">Github</a></li>
+          <li><a href="/" data-content="page-description">Home</a></li>
+          <li><a href="/projects" data-content="projects-section">Projects</a></li>
+          <li><a href="/about" data-content="about-me">About Me</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://github.com/Keiranbeaton">Github</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="page-description" class="content-section">
+      <section id="page-description" class="content-section container">
         <div class="section-header">
           <h3>Page Description</h3>
         </div>
@@ -57,7 +60,7 @@
         </article>
       </section>
 
-      <section id="projects-section" class="content-section">
+      <section id="projects-section" class="content-section container">
         <div class="section-header">
           <h3>Projects</h3>
         </div>
@@ -68,7 +71,7 @@
         </div>
       </section>
 
-      <section id="about-me" class="content-section">
+      <section id="about-me" class="content-section container">
         <div class="section-header">
           <h3>About Me</h3>
           </div>
@@ -77,7 +80,7 @@
             <h3></h3>
           </header>
           <section class="photo-container">
-            <img src="images/keiran-fourth-of-july.jpg">
+            <img src="images/keiran-fourth-of-july.jpg" class="container">
           </section>
           <section class="article-body about-me-text-section">
             <p class="about-me-text-content">I graduated the University of Washington in August of 2015 with a Bachelor's degree in Political Science. I spent a short time in sales, but I realized I really didn't like sales and it wasn't something I wanted to be doing for a career. I'm an avid sports fan, and can't wait for my Dawgs to be National Champions in college football this upcoming season.</p>
@@ -86,24 +89,25 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer container">
       <nav class="nav-bar">
-        <div class="icon-menu"></div>
         <ul>
-          <li><a href="#" class="icon-home nav-tab" data-content="page-description">Home</a></li>
-          <li><a href="#" class="icon-projects nav-tab" data-content="projects-section">Projects</a></li>
-          <li><a href="#" class="icon-about-me nav-tab" data-content="about-me">About Me</a></li>
-          <li><a href="#" class="icon-linked-in">LinkedIn</a></li>
-          <li><a href="https://github.com/Keiranbeaton" class="icon-github">Github</a></li>
+          <li><a href="/" data-content="page-description">Home</a></li>
+          <li><a href="/projects" data-content="projects-section">Projects</a></li>
+          <li><a href="/about" data-content="about-me">About Me</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://github.com/Keiranbeaton">Github</a></li>
         </ul>
       </nav>
     </footer>
     <script src="vendors/scripts/jquery-2.2.3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="scripts/project.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script>
-      Project.fetchAll(projectView.initIndexPage);
-    </script>
+    <script src="vendors/scripts/page.js"></script>
+    <script src="vendors/scripts/handlebars.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/projectController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>

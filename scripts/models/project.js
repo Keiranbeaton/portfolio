@@ -9,7 +9,7 @@
   Project.all = [];
 
   Project.prototype.toHtml = function(templateId) {
-    var template = Handlebars.compile((templateId).html());
+    var template = Handlebars.compile((templateId).text());
     return template(this);
   };
 
