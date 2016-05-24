@@ -1,0 +1,40 @@
+body {
+    font-size: 1rem;
+}
+
+h1 {
+  font-size: 3.157rem;
+  font-family: garamond;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2.369rem;
+  font-family: georgia;
+}
+
+h3 {
+  font-size: 1.777rem;
+  font-family: georgia;
+}
+
+h4 {
+  font-size: 1.333rem;
+  font-family: georgia;
+}
+
+p {
+  font-family: arial;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  font-family: arial;
+  font-weight: lighter;
+}
+
+select {
+  font-family: arial;
+  font-weight: lighter;
+}

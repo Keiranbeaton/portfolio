@@ -1,0 +1,28 @@
+h1 {
+  color: #328A2E;
+}
+
+h2 {
+  color: #AA6239;
+}
+
+h3 {
+  color: #328A2E;
+}
+
+h4 {
+  color: #AA6239;
+}
+
+a {
+  color: #328A2E;
+}
+
+select {
+  background-color: black;
+  color: #B9D5F9;
+}
+
+.container {
+  background-color: rgba(185, 213, 249, 0.9);
+}
