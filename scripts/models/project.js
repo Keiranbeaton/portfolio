@@ -30,26 +30,26 @@
   //   });
   // };
 
-  // Project.fetchAll = function(next) {
-  //   if (localStorage.projectsData) {
-  //     $.ajax({
-  //       type: 'HEAD',
-  //       url: 'data/projectsData.json',
-  //       success: function(data, message, xhr) {
-  //         var eTag = xhr.getResponseHeader('eTag');
-  //         if (!localStorage.eTag || eTag !== localStorage.eTag) {
-  //           localStorage.eTag = eTag;
-  //           Project.getAll(next);
-  //         } else {
-  //           Project.loadAll(JSON.parse(localStorage.projectsData));
-  //           next();
-  //         }
-  //       }
-  //     });
-  //   } else {
-  //     Project.getAll(next);
-  //   }
-  // };
+  Project.fetchAll = function(next) {
+    if (localStorage.projectsData) {
+      $.get({
+        type: 'HEAD',
+        url: 'data/projectsData.json',
+        success: function(data, message, xhr) {
+          var eTag = xhr.getResponseHeader('eTag');
+          if (!localStorage.eTag || eTag !== localStorage.eTag) {
+            localStorage.eTag = eTag;
+            Project.getAll(next);
+          } else {
+            Project.loadAll(JSON.parse(localStorage.projectsData));
+            next();
+          }
+        }
+      });
+    } else {
+      Project.getAll(next);
+    }
+  };
 
   Project.createTable = function() {
     webDB.execute(
