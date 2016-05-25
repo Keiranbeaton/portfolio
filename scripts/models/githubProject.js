@@ -10,7 +10,7 @@
   githubProject.requestProjects = function(callback) {
     $.get('/github/users/Keiranbeaton/repos' + '?per_page=15' + '&sort=updated')
     .done(function(data) {
-      repos.all = data;
+      githubProject.all = data;
     }).done(callback);
   };
 
