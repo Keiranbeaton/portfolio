@@ -8,15 +8,10 @@
   githubProject.all = [];
 
   githubProject.requestProjects = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/Keiranbeaton/repos' + '?per_page=10' + '&sort=updated',
-      type: 'GET',
-      headers: {'Authorization':'token ' + githubToken},
-      success: function(data, message, xhr) {
-        githubProject.all = data;
-        callback();
-      }
-    });
+    $.get('/github/users/Keiranbeaton/repos' + '?per_page=15' + '&sort=updated')
+    .done(function(data) {
+      repos.all = data;
+    }).done(callback);
   };
 
   githubProject.createTable = function() {
@@ -35,7 +30,7 @@
         $.ajax({
           url: 'https://api.github.com/users/Keiranbeaton/repos' + '?per_page=25' + '&sort=updated',
           type: 'GET',
-          headers: {'Authorization':'token ' + githubToken},
+          headers: {'Authorization':'token ' + GITHUB_TOKEN},
           success: function(data, message, xhr) {
             data.forEach(function(obj) {
               var project = new githubProject(obj);
