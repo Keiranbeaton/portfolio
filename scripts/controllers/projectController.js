@@ -3,12 +3,10 @@
 
   projectController.index = function() {
     if(Project.all.length === 0) {
-      Project.fetchAll(projectView.initIndexPage);
+      Project.callTables();
     }
     projectView.setTeasers();
-    $('#page-description').hide();
-    $('#about-me').hide();
-    $('#projects-section').fadeIn();
+    $('#projects-section').fadeIn().siblings().hide();
   };
 
   module.projectController = projectController;

@@ -2,9 +2,7 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    $('#page-description').hide();
-    $('#projects-section').hide();
-    $('#about-me').fadeIn();
+    $('#about-me').fadeIn().siblings().hide();
   };
 
   module.aboutController = aboutController;
