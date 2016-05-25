@@ -2,9 +2,7 @@
   var homeController = {};
 
   homeController.index = function() {
-    $('#about-me').hide();
-    $('#projects-section').hide();
-    $('#page-description').fadeIn();
+    $('#page-description').fadeIn().siblings().hide();
   };
 
   module.homeController = homeController;
