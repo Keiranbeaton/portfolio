@@ -2,14 +2,22 @@
   var projectView = {};
 
   projectView.setTeasers = function() {
-    $('.article-body *:nth-of-type(n+2)').hide();
+    $('.article-body p:nth-of-type(n+2)').hide();
     $('.read-more').show();
-    $('.article-body').on('click', 'a', function(e){
+    $('.read-less').hide();
+    $('.article-body').on('click', 'a.read-more', function(e){
       e.preventDefault();
       $($(this).parent().children()).show();
       $(this).hide();
     });
+    $('.article-body').on('click', 'a.read-less', function(e){
+      e.preventDefault();
+      $('.article-body p:nth-of-type(n+2)').hide();
+      $(this).hide();
+      $($(this).parent().children('a.read-more')).show();
+    });
   };
+
 
   projectView.handleFilter = function() {
     $('#category-filter').on('change', function() {

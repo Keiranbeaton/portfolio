@@ -46,7 +46,6 @@
 
   Project.populateDatabase = function() {
     webDB.execute('SELECT * FROM projectData', function(rows) {
-      console.log(rows);
       if (rows.length === 0) {
         $.getJSON('data/projectsData.json', function(data) {
           data.forEach(function(obj) {
@@ -55,7 +54,7 @@
           });
         });
       } else {
-        console.log('project.populateDatabase did not do what it was supposed to');
+        console.log('Database already populated');
       };
     });
   };
@@ -81,11 +80,10 @@
   };
 
   Project.joinTables = function(callback) {
-    console.log('join tables started');
     webDB.execute(
       'SELECT projectData.id, title, match, category, body, githubData.createdOn AS createdOn, githubData.updatedOn AS updatedOn, githubData.projectUrl AS projectUrl FROM projectData INNER JOIN githubData ON projectData.match=githubData.name ORDER BY title DESC;',
     function(result) {
-      console.log('really hoping the tables joined', result);
+      console.log('Tables have joined', result);
       Project.loadAll(result);
       callback();
     });

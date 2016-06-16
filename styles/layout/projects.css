@@ -32,3 +32,8 @@
 #projects-section div {
   margin-bottom: 0.5rem;
 }
+
+#projects-section p {
+  text-indent: 1rem;
+  margin-bottom: 0.5rem;
+}

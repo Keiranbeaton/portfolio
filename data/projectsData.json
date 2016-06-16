@@ -3,24 +3,31 @@
     "title":  "Cookie Stand",
     "match": "cookie-stand",
     "category": "April, 2016",
-    "body":  "<p>This was a project I completed for Codefellows 201. We were given the task of making two separate pages. The first would be a customer facing page for a hypothetical cookie shop. The second would allow the shops owner to view store sales data for different locations, and would allow them to add locations by passing in a minimal amount of data.<\/p><p>More body text.<\/p>"
+    "body":  "<p>This was a project I completed for Codefellows 201. We were given the task of making two separate pages. The first would be a customer facing page for a hypothetical cookie shop. The second would allow the shops owner to view store sales data for different locations, and would allow them to add locations by passing in a minimal amount of data.<\/p><p>The customer facing page was made entirely with html and css, with no javascript involved. The store sales data page used javascript, and it was the first time I used javascript to manipulate the DOM.<\/p>"
   },
   {
     "title":  "Bus Mall",
     "match": "bus-mall",
     "category": "April, 2016",
-    "body":  "<p>This was a project I completed for Codefellows 201. We were given 20 photos, and tasked with making 3 random images from these 20 appear on each click. We had to track how many times each image was clicked, and store this data to local storage to allow for data from multiple uses. We also had to give the user a choice after 25 clicks, giving them the option of viewing their results or continuing for ten more clicks.<\/p><p>More body text.<\/p>"
+    "body":  "<p>This was a project I completed for Codefellows 201. We were given 20 photos, and tasked with making 3 random images from these 20 appear on each click. We had to track how many times each image was clicked, and store this data to local storage to allow for data from multiple uses. We also had to give the user a choice after 25 clicks, giving them the option of viewing their results or continuing for ten more clicks.<\/p><p>This was my first time using chart.js, and required some javascript logic so that the survey would run the correct number of times, then give the option of continuing on or viewing the results.<\/p>"
   },
   {
     "title":  "Sasquatch Dice",
     "match": "dice-game",
     "category": "May, 2016",
-    "body":  "<p>This was a project I worked on as part of a group for my Final Project in Codefellows 201. We created a probability game, and saved the scores of each game to create a leaderboard that users could view on a separate page.<\/p><p>More body text.<\/p>"
+    "body":  "<p>This was a project I worked on as part of a group for my Final Project in Codefellows 201. We created a probability game, and saved the scores of each game to create a leaderboard that users could view on a separate page.<\/p><p>I spent most of my time working on the javascript in this assignment. I created the leaderboard page, and wrote the code that guided much of the logic of the game as well.<\/p>"
   },
   {
     "title":  "About Me",
     "match": "about-me",
     "category": "April, 2016",
-    "body":  "<p>This was my first ever project in my Codefellows 201 course. We were tasked with creating a page that had some information about us, then styling it ourselves. We also had to use prompts and alerts to guide the page's user through a ten question quiz, then return their score to them at the end of the quiz.<\/p><p>More body text.<\/p>"
+    "body":  "<p>This was my first ever project in my Codefellows 201 course. We were tasked with creating a page that had some information about us, then styling it ourselves. We also had to use prompts and alerts to guide the page's user through a ten question quiz, then return their score to them at the end of the quiz.<\/p><p>Since this was my first foray into web development, it is rather crude at first glance. We used only html and very basic javascript to craft this, making the functionality minimal. However, I'm still proud of it because I had never done anything like this before and I was able to complete the project.<\/p>"
+  },
+  {
+    "title":  "Don't Stop Retrievin'",
+    "match": "dont-stop-retrieving",
+    "category": "June, 2016",
+    "body":  "<p>This was the final project for my Codefellows 301 course. I was a part of a four person team, and we were tasked with creating a single page web app that pulled data from a web api. The purpose of the page is to help dog owners find off leash dog parks in the city of Seattle. We used an api from the city of Seattle to get the information about these parks. We then used the google maps api to allow the user to enter their address into the page, and view which dog parks were closest to them, and how far away they were.<\/p><p>We also created single pages for each park, where users have the opportunity to leave comments or reviews about the park. We saved these reviews using firebase, and display them on the bottom half of the information page for each park.<\/p><p>For this project I worked extensively on both the javascript and the css. I really thought this was great learning experience as well. We really only had 3 days to complete the assignment, and initially ran into several conflicts between the code each of us had written independently. We had to focus on communicating better and delegating tasks more specifically to in order to avoid more conflicts and use our time more effectively, and it helped me to learn the importance of cooperation within a team.<\/p>"
   }
+
 ]
