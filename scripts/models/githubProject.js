@@ -12,7 +12,6 @@
     GithubProject.all = GithubProject.all.map(function(obj) {
       obj.updated_at = obj.updated_at.slice(0, 10);
       obj.created_at = obj.created_at.slice(0, 10);
-      console.log(obj);
       return obj;
     });
     console.log(GithubProject.all);
@@ -26,11 +25,23 @@
 
   GithubProject.createTable = function() {
     webDB.execute(
-      'CREATE TABLE IF NOT EXISTS githubData (id INTEGER PRIMARY KEY, name VARCHAR, createdOn VARCHAR, updatedOn VARCHAR, projectUrl VARCHAR);',
-      function(result) {
-        console.log('Successfully set up the githubData table.', result);
-      }
+      'CREATE TABLE IF NOT EXISTS githubData (id INTEGER PRIMARY KEY, name VARCHAR, createdOn VARCHAR, updatedOn VARCHAR, projectUrl VARCHAR);'
     );
+  };
+
+  GithubProject.getData = function() {
+    $.ajax({
+      url: 'https://api.github.com/users/Keiranbeaton/repos' + '?per_page=25' + '&sort=updated',
+      type: 'GET',
+      headers: {'Authorization':'token ' + githubToken},
+      success: function(data, message, xhr) {
+        GithubProject.loadAll(data);
+        GithubProject.fixDates();
+        GithubProject.all.forEach(function(a){
+          a.insertRecord();
+        });
+      }
+    });
   };
 
   GithubProject.truncateTable = function() {
@@ -46,21 +57,10 @@
   GithubProject.populateDatabase = function() {
     webDB.execute('SELECT * FROM githubData', function(rows) {
       if (rows.length === 0) {
-        $.ajax({
-          url: 'https://api.github.com/users/Keiranbeaton/repos' + '?per_page=25' + '&sort=updated',
-          type: 'GET',
-          headers: {'Authorization':'token ' + githubToken},
-          success: function(data, message, xhr) {
-            console.log('data, ', data);
-            GithubProject.loadAll(data);
-            GithubProject.fixDates();
-            GithubProject.all.forEach(function(a){
-              a.insertRecord();
-            });
-          }
-        });
+        GithubProject.getData();
       } else {
-        console.log('table already populated');
+        GithubProject.truncateTable();
+        GithubProject.getData();
       };
     });
   };
