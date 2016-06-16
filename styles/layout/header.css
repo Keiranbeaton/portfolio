@@ -1,0 +1,15 @@
+header {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: thin solid black;
+  padding: 0.25rem 0rem 0.25rem 0rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header h2 {
+  margin-bottom: 1rem;
+}

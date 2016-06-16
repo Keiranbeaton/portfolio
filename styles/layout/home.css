@@ -1,0 +1,23 @@
+#home {
+  width: 80%;
+  margin-left:9%;
+  margin-right:9%;
+  padding: 1% 1% 2% 1%;
+  border: thin solid black;
+  margin-bottom: 18%;
+}
+
+#home h3 {
+  text-align: left;
+  margin-bottom: 0.25rem;
+}
+
+#home h4 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  text-align: left;
+  text-indent: 1rem;
+}

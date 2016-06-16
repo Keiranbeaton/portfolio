@@ -23,6 +23,22 @@ select {
   color: #B9D5F9;
 }
 
-.container {
+header {
+  background-color: rgba(185, 213, 249, 0.9);
+}
+
+#home {
+  background-color: rgba(185, 213, 249, 0.9);
+}
+
+#projects-section {
+  background-color: rgba(185, 213, 249, 0.9);
+}
+
+#about-me {
+  background-color: rgba(185, 213, 249, 0.9);
+}
+
+footer {
   background-color: rgba(185, 213, 249, 0.9);
 }

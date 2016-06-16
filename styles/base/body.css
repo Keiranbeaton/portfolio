@@ -1,0 +1,6 @@
+body {
+  padding: 0.2rem;
+  background-image: url("../../images/uw-fountain.jpg");
+  background-attachment: fixed;
+  text-align: center;
+}

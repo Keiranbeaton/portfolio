@@ -6,12 +6,12 @@
   }
 
   li {
-    display: inline;
+    display: inline-block;
     margin-left: 4%;
     margin-right: 4%;
   }
 
-  .site-footer {
+  footer {
     display:block;
   }
 

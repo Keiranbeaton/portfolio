@@ -23,9 +23,15 @@ h4 {
   font-family: georgia;
 }
 
+h5 {
+  font-size: 1.1rem;
+  font-family: georgia;
+}
+
 p {
   font-family: arial;
   font-weight: lighter;
+  line-height: 1.1rem;
 }
 
 a {

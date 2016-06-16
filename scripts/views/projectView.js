@@ -3,8 +3,8 @@
 
   projectView.setTeasers = function() {
     $('.read-more').show();
-    $('.article-body *:nth-of-type(n+2)').hide();
-    $('article').on('click', 'a', function(e){
+    $('.article-body *:nth-of-type(n+1)').hide();
+    $('.article-body').on('click', 'a', function(e){
       e.preventDefault();
       $($(this).parent().children('.article-body')).children().show();
       $(this).hide();

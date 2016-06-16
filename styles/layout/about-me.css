@@ -1,0 +1,30 @@
+#about-me {
+  display: none;
+  width: 80%;
+  margin-left:9%;
+  margin-right:9%;
+  padding: 1% 1% 2% 1%;
+  border: thin solid black;
+  margin-bottom: 4%;
+}
+
+#about-me h3 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+#about-me img {
+  max-width: 30%;
+  display: inline-block;
+  border-radius: 100%;
+  vertical-align: top;
+}
+
+#about-me p {
+  max-width: 50%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  margin-top: 3rem;
+  margin-right: 2rem;
+}

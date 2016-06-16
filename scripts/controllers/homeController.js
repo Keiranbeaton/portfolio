@@ -2,7 +2,7 @@
   var homeController = {};
 
   homeController.index = function() {
-    $('#page-description').fadeIn().siblings().hide();
+    $('#home').fadeIn().siblings().hide();
   };
 
   module.homeController = homeController;

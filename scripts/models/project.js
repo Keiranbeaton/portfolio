@@ -13,22 +13,6 @@
     return template(this);
   };
 
-  // Project.loadAll = function(data) {
-  //   data.sort(function(a,b) {
-  //     return (new Date(b.createdOn)) - (new Date(a.createdOn));
-  //   });
-  //   data.forEach(function(ele) {
-  //     Project.all.push(new Project(ele));
-  //   });
-  // };
-
-  // Project.getAll = function(next) {
-  //   $.getJSON('data/projectsData.json', function(responseData) {
-  //     Project.loadAll(responseData);
-  //     localStorage.projectsData = JSON.stringify(responseData);
-  //     next();
-  //   });
-  // };
 
   Project.fetchAll = function(next) {
     if (localStorage.projectsData) {
