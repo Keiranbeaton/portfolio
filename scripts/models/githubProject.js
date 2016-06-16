@@ -24,7 +24,6 @@
     });
   };
 
-
   GithubProject.createTable = function() {
     webDB.execute(
       'CREATE TABLE IF NOT EXISTS githubData (id INTEGER PRIMARY KEY, name VARCHAR, createdOn VARCHAR, updatedOn VARCHAR, projectUrl VARCHAR);',
@@ -43,7 +42,6 @@
       ]
     );
   };
-
 
   GithubProject.populateDatabase = function() {
     webDB.execute('SELECT * FROM githubData', function(rows) {
