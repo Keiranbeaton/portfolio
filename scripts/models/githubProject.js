@@ -72,7 +72,7 @@
       [
         {
           'sql': 'INSERT INTO githubData (name, createdOn, updatedOn, projectUrl) VALUES (?, ?, ?, ?);',
-          'data': [this.name, this.created_at, this.updated_at, this.url]
+          'data': [this.name, this.created_at, this.updated_at, this.html_url]
         }
       ],
       function result() {
