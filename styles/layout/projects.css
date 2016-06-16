@@ -6,29 +6,29 @@
   padding: 1% 1% 2% 1%;
   border: thin solid black;
   margin-bottom: 5%;
+  text-align: left;
+}
+
+#projects-section .project {
+  margin-bottom: 1rem;
 }
 
 #projects-section h3 {
-  text-align: left;
   margin-bottom: 1rem;
 }
 
 .filter-container {
-  text-align: left;
   margin-bottom: 2rem;
 }
 
 #projects-section h4 {
-  text-align: left;
   margin-bottom: 0.5rem;
 }
 
 #projects-section h5 {
-  text-align: left;
   margin-bottom: 0.5rem;
 }
 
-#projects-section p {
-  text-align: left;
+#projects-section div {
   margin-bottom: 0.5rem;
 }
