@@ -12,7 +12,7 @@
   githubView.index = function() {
     ui();
     $('#about ul').append(
-      githubProject.with('name').map(render)
+      GithubProject.with('name').map(render)
     );
   };
 

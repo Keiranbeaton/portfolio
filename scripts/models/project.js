@@ -93,20 +93,17 @@
 
   Project.callTables = function() {
     Project.createTable();
-    githubProject.createTable();
+    GithubProject.createTable();
     Project.populateDatabase();
-    githubProject.populateDatabase();
+    GithubProject.populateDatabase();
     Project.joinTables(projectView.initIndexPage);
   };
 
-  Project.truncateTables = function() {
+  Project.truncateTable = function() {
     webDB.execute(
       [
         {
           'sql': 'DELETE FROM projectData'
-        },
-        {
-          'sql': 'DELETE FROM githubData'
         }
       ]
     );
