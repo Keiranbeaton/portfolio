@@ -4,43 +4,40 @@ body {
 
 h1 {
   font-size: 3.157rem;
-  font-family: garamond;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: bolder;
 }
 
 h2 {
   font-size: 2.369rem;
-  font-family: georgia;
+  font-family: 'Lemonada', cursive;
 }
 
 h3 {
   font-size: 1.777rem;
-  font-family: georgia;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 h4 {
   font-size: 1.333rem;
-  font-family: georgia;
+  font-family: 'Lemonada', cursive;
 }
 
 h5 {
   font-size: 1.1rem;
-  font-family: georgia;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 p {
-  font-family: arial;
-  font-weight: lighter;
+  font-family: 'Cairo', sans-serif;
   line-height: 1.1rem;
 }
 
 a {
   text-decoration: none;
-  font-family: arial;
-  font-weight: lighter;
+  font-family: 'Cairo', sans-serif;
 }
 
 select {
-  font-family: arial;
-  font-weight: lighter;
+  font-family: 'Cairo', sans-serif;
 }
